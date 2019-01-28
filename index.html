@@ -7,34 +7,93 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
-    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
 
 
-
-  <title>Hello, world!</title>
+  <title>StarGazer</title>
 </head>
 
-<body class="indigo darken-2">
-  <div class="container">
-    <div class="row">
-      <div class="col s12">
-        <a class="center-align hide" href="https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjwrLvC347gAhVFS6wKHcWmA2UQjRx6BAgBEAU&url=http%3A%2F%2Fwww.diptyqueparis-memento.com%2Fen%2Fconstellations%2F&psig=AOvVaw2EkswXSmxUIV0lQK37hTVq&ust=1548705443236801"
-          id="space-pic"><img width="400" height="400" src="http://www.diptyqueparis-memento.com/wp-content/uploads/2017/11/ESAHubble-the-constellation-Taurus-as-photographed-by-the-avid-astrophotographer-Akira-Fujii.jpg"></a>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col s12">
-        <button class="waves-effect waves-light purple darken-3 center-align" id="locator-button"><i class="material-icons">
-            wifi_tethering</i>Use My location</button>
+<body class="indigo darken-2" >
+ 
+    
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-header">
+          
+            <div id="header">
+                <h1><a href="#">StarGazer</a></h1>
+                <h2>ASP-Inc.</h2>
+            </div>
+            <div id="menu">
+                <ul>
+                    <li><a href="#">Homepage</a></li>
+                    <li><a href="#">Country</a></li>
+                    <li><a href="#">Location</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        
+    </div><!--/.navbar -->
+    
+    <div class="row-offcanvas row-offcanvas-left">
+      <div id="sidebar" class="sidebar-offcanvas">
+          <div class="col-md-12">
+            <h3>Sidebar (fixed)</h3>
+            <ul class="nav nav-pills nav-stacked">
+              <li class="active"><a href="#">Section</a></li>
+              <li><a href="#">Section</a></li>
+              <li><a href="#">Section</a></li>
+              <li><a href="#">Section</a></li>
+              <li><a href="#">Section</a></li>
+              <li><a href="#">Section</a></li>
+              <li><a href="#">Section</a></li>
+              <li><a href="#">Section</a></li>
+              <li><a href="#">Section</a></li>
+              <li><a href="#">Section</a></li>
+            </ul>
+          </div>
       </div>
 
-    </div>
-    <!-- Optional JavaScript -->
+      <div class="row-offcanvas row-offcanvas-right">
+          <div id="sidebar-right" class="sidebar-offcanvas">
+              <div class="col-md-12">
+                <h3>Sidebar (fixed)</h3>
+                <ul class="nav nav-pills nav-stacked">
+                  <li class="active"><a href="#">Section</a></li>
+                  <li><a href="#">Section</a></li>
+                  <li><a href="#">Section</a></li>
+                  <li><a href="#">Section</a></li>
+                  <li><a href="#">Section</a></li>
+                  <li><a href="#">Section</a></li>
+                  <li><a href="#">Section</a></li>
+                  <li><a href="#">Section</a></li>
+                  <li><a href="#">Section</a></li>
+                  <li><a href="#">Section</a></li>
+                </ul>
+              </div>
+          </div>
+      <div id="main">
+          <div class="col-md-12">
+              <p class="visible-xs">
+                  <button class="waves-effect waves-light purple darken-3 center-align" id="locator-button"><i class="material-icons">
+                      wifi_tethering</i>Use My location</button>
+              
+              <div class="row">
+                  <div class="col-md-12"><div class="well"> <a class="center-align hide" href="https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjwrLvC347gAhVFS6wKHcWmA2UQjRx6BAgBEAU&url=http%3A%2F%2Fwww.diptyqueparis-memento.com%2Fen%2Fconstellations%2F&psig=AOvVaw2EkswXSmxUIV0lQK37hTVq&ust=1548705443236801"
+                    id="space-pic"><img width="400" height="400" src="http://www.diptyqueparis-memento.com/wp-content/uploads/2017/11/ESAHubble-the-constellation-Taurus-as-photographed-by-the-avid-astrophotographer-Akira-Fujii.jpg"></a></div></div>
+              </div>
+              
+          </div>
+      </div>
+    </div><!--/row-offcanvas -->
+      <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
       crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
@@ -43,6 +102,7 @@
       crossorigin="anonymous"></script>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./script.js"></script>
     <script>
       var locatorButton = $("#locator-button")
       locatorButton.click("button", function (event) {
