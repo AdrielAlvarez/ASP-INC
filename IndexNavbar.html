@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+    crossorigin="anonymous">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- <link rel="stylesheet" type="text/css" href="Assets/css/reset.css"> -->
+  <link rel="stylesheet" type="text/css" href="navbar.css">
+
+
+  <title>Hello, world!</title>
+</head>
+<body>
+    <div id="header">
+        <h1><a href="#">StarGazer</a></h1>
+        <h2>ASP-Inc.</h2>
+    </div>
+    <div id="menu">
+        <ul>
+            <li><a href="#">Homepage</a></li>
+            <li><a href="#">Country</a></li>
+            <li><a href="#">Location</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </div>
+</body>
+
+<body class="indigo darken-2">
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+        <a class="center-align hide" href="https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjwrLvC347gAhVFS6wKHcWmA2UQjRx6BAgBEAU&url=http%3A%2F%2Fwww.diptyqueparis-memento.com%2Fen%2Fconstellations%2F&psig=AOvVaw2EkswXSmxUIV0lQK37hTVq&ust=1548705443236801"
+          id="space-pic"><img width="400" height="400" src="http://www.diptyqueparis-memento.com/wp-content/uploads/2017/11/ESAHubble-the-constellation-Taurus-as-photographed-by-the-avid-astrophotographer-Akira-Fujii.jpg"></a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s12">
+        <button class="waves-effect waves-light purple darken-3 center-align" id="locator-button"><i class="material-icons">
+            wifi_tethering</i>Use My location</button>
+      
+          </div>
+
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+      crossorigin="anonymous"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+      var locatorButton = $("#locator-button")
+      locatorButton.click("button", function (event) {
+        var c = confirm("Can we use your location?")
+        if (c) {
+          locatorButton.addClass("hide")
+          $("#space-pic").removeClass("hide")
+        }
+      })
+    </script>
+</div>
+</body>
+
+
+
+</html>-
+
+
