@@ -12,11 +12,27 @@
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
+  <!-- <link rel="stylesheet" type="text/css" href="Assets/css/reset.css"> -->
+  <link rel="stylesheet" type="text/css" href="navbar.css">
 
 
   <title>Hello, world!</title>
 </head>
+<body>
+    <div id="header">
+        <h1><a href="#">StarGazer</a></h1>
+        <h2>ASP-Inc.</h2>
+    </div>
+    <div id="menu">
+        <ul>
+            <li><a href="#">Homepage</a></li>
+            <li><a href="#">Country</a></li>
+            <li><a href="#">Location</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </div>
+</body>
 
 <body class="indigo darken-2">
   <div class="container">
@@ -30,9 +46,11 @@
       <div class="col s12">
         <button class="waves-effect waves-light purple darken-3 center-align" id="locator-button"><i class="material-icons">
             wifi_tethering</i>Use My location</button>
-      </div>
+      
+          </div>
 
-    </div>
+    
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -47,13 +65,17 @@
       var locatorButton = $("#locator-button")
       locatorButton.click("button", function (event) {
         var c = confirm("Can we use your location?")
-
         if (c) {
           locatorButton.addClass("hide")
           $("#space-pic").removeClass("hide")
         }
       })
     </script>
+</div>
 </body>
 
-</html>
+
+
+</html>-
+
+
