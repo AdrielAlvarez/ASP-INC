@@ -4,7 +4,7 @@
 }
 
 body {
-	background: #000000 url(images/Space1.jpg);
+	background: #000000 url(Space1.jpg);
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 	color: #999999;
 }
@@ -47,7 +47,7 @@ a:hover {
 	width: 960px;
 	height: 80px;
 	margin: 0 0 0 0;
-	background: url(images/Space1.jpg);
+	background: url(Space1.jpg);
 }
 
 #header h1, #header h2 {
