@@ -7,7 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+    crossorigin="anonymous">
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -17,91 +18,119 @@
   <title>StarGazer</title>
 </head>
 
-<body class="indigo darken-2" >
- 
-    
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="navbar-header">
-          
-            <div id="header">
-                <h1><a href="#">StarGazer</a></h1>
-                <h2>ASP-Inc.</h2>
-            </div>
-            <div id="menu">
-                <ul>
-                    <li><a href="#">Homepage</a></li>
-                    <li><a href="#">Country</a></li>
-                    <li><a href="#">Location</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                </ul>
-            </div>
-        </div>
-        
-    </div><!--/.navbar -->
-    
-    <div class="row-offcanvas row-offcanvas-left">
-      <div id="sidebar" class="sidebar-offcanvas">
-          <div class="col-md-12">
-            
-            <h5>MOON PHASE</h5>
-            <br>
-            <img src="./images/2019-01-28 (3).png" width="90%" height="90%" class="img-thumbnail">
-            <br>
-            <br>
-          
-            <ul class="nav nav-pills nav-stacked">
-              <li>TUESDAY, JANUARY 29, 2019</li>
-              <li>Phase: Waning Crescent</li>
-              <li>Illumination: 34% </li>
-              <li>Moon Age: 23.71 days</li>
-              <li>Moon Angle: 0.52</li>
-              <li>Moon Distance: 386,578.55 km</li>
-              <li>Sun Angle: 0.54</li>
-              <li>Sun Distance: 147,356,091.92 km</li>
-              <li></li>
-            </ul>
-          </div>
-      </div>
+<body class="indigo darken-2">
 
-      <div class="row-offcanvas row-offcanvas-right">
-          <div id="sidebar-right" class="sidebar-offcanvas">
-              <div class="col-md-12">
-                <h5>Last users:</h5>
-                <br>
-                <br>
-                <ul class="nav nav-pills nav-stacked">
-                    <img src="./images/2019-01-28 (5).png" width="90%" height="90%" class="img-thumbnail">
-                  <li>Elon Musk</li>
-                  <br>
-                  <br>
-                  <img src="./images/2019-01-28 (6).png" width="90%" height="90%" class="img-thumbnail">
-                  <li>Jef Bezos</li>
-                  <br>
-                  <br>
-                  <img src="./images/2019-01-28 (7).png" width="90%" height="90%" class="img-thumbnail">
-                  <li>Elon Musk</li>
-                  <br>
-                  <br>
-                  <img src="./images/2019-01-28 (8).png" width="90%" height="90%" class="img-thumbnail">
-                  <li>Jef Bezos</li>
-              </div>
-          </div>
-      <div id="main">
-          <div class="col-md-12">
-              <p class="visible-xs">
-                  <button class="waves-effect waves-light purple darken-3 center-align" id="locator-button"><i class="material-icons">
-                      wifi_tethering</i>Use My location</button>
-              
-              <div class="row">
-                  <div class="col-md-12"><div class="well"> <a class="center-align hide" href="https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjwrLvC347gAhVFS6wKHcWmA2UQjRx6BAgBEAU&url=http%3A%2F%2Fwww.diptyqueparis-memento.com%2Fen%2Fconstellations%2F&psig=AOvVaw2EkswXSmxUIV0lQK37hTVq&ust=1548705443236801"
-                    id="space-pic"><img width="400" height="400" src="http://www.diptyqueparis-memento.com/wp-content/uploads/2017/11/ESAHubble-the-constellation-Taurus-as-photographed-by-the-avid-astrophotographer-Akira-Fujii.jpg"></a></div></div>
-              </div>
-              
-          </div>
+
+  <!-- <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-header">
+
+      <div id="header">
+        <h1><a href="#">StarGazer</a></h1>
+        <h2>ASP-Inc.</h2>
       </div>
-    </div><!--/row-offcanvas -->
-      <!-- Optional JavaScript -->
+      <div id="menu">
+        <ul>
+          <li><a href="#">Homepage</a></li>
+          <li><a href="#">Country</a></li>
+          <li><a href="#">Location</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+
+ 
+  </div> -->
+  <nav>
+      <div class="nav-wrapper">
+          <ul id="dropdown1" class="dropdown-content">
+              <li><a href="#!">Homepage</a></li>
+              <li><a href="#!">Country</a></li>
+              <li ><a href="#!">Location</a></li>
+              <li><a href="#!">About Us</a></li>
+              <li><a href="#!">Contact Us</a></li>
+            </ul>
+            <nav>
+              <div class="nav-wrapper purple">
+                <a href="#!" class="brand-logo">Logo</a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#!">Homepage</a></li>
+
+                  <li><a href="#!">australia</a></li>
+                  <li><a href=#!">India</a></li>
+                  <!-- Dropdown Trigger -->
+                  <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">More<i class="material-icons right">arrow_drop_down</i></a></li>
+                </ul>
+              </div>
+            </nav>      </div>
+    </nav>
+  <!--/.navbar -->
+
+  <div class="row-offcanvas row-offcanvas-left">
+    <div id="sidebar" class="sidebar-offcanvas">
+      <div class="col-md-12">
+
+        <h5>MOON PHASE</h5>
+        <br>
+        <img src="./images/2019-01-28 (3).png" width="90%" height="90%" class="img-thumbnail">
+        <br>
+        <br>
+
+        <ul class="nav nav-pills nav-stacked">
+          <li>TUESDAY, JANUARY 29, 2019</li>
+          <li>Phase: Waning Crescent</li>
+          <li>Illumination: 34% </li>
+          <li>Moon Age: 23.71 days</li>
+          <li>Moon Angle: 0.52</li>
+          <li>Moon Distance: 386,578.55 km</li>
+          <li>Sun Angle: 0.54</li>
+          <li>Sun Distance: 147,356,091.92 km</li>
+          <li></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row-offcanvas row-offcanvas-right">
+      <div id="sidebar-right" class="sidebar-offcanvas">
+        <div class="col-md-12 center-align">
+          <h5>Last users:</h5>
+          <br>
+          <br>
+          <ul class="nav nav-pills nav-stacked">
+            <img src="./images/2019-01-28 (5).png" width="90%" height="90%" class="img-thumbnail">
+            <li>Elon Musk</li>
+            <br>
+            <br>
+            <img src="./images/2019-01-28 (6).png" width="90%" height="90%" class="img-thumbnail">
+            <li>Jef Bezos</li>
+            <br>
+            <br>
+            <img src="./images/2019-01-28 (7).png" width="90%" height="90%" class="img-thumbnail">
+            <li>Elon Musk</li>
+            <br>
+            <br>
+            <img src="./images/2019-01-28 (8).png" width="90%" height="90%" class="img-thumbnail">
+            <li>Jef Bezos</li>
+        </div>
+      </div>
+      <div id="main py-3">
+        <div class="col-md-12 py-3 center-align">
+          <p class="visible-xs py-3">
+            <button class="waves-effect waves-light purple darken-3 " id="locator-button"><i class="material-icons">
+                wifi_tethering</i>Use My location</button>
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="well"> <a class="center-align hide" href="https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjwrLvC347gAhVFS6wKHcWmA2UQjRx6BAgBEAU&url=http%3A%2F%2Fwww.diptyqueparis-memento.com%2Fen%2Fconstellations%2F&psig=AOvVaw2EkswXSmxUIV0lQK37hTVq&ust=1548705443236801"
+                    id="space-pic"><img width="400" height="400" src="http://www.diptyqueparis-memento.com/wp-content/uploads/2017/11/ESAHubble-the-constellation-Taurus-as-photographed-by-the-avid-astrophotographer-Akira-Fujii.jpg"></a></div>
+              </div>
+            </div>
+
+        </div>
+      </div>
+    </div>
+    <!--/row-offcanvas -->
+    <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -113,6 +142,9 @@
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="./script.js"></script>
+    <script>
+    $(".dropdown-trigger").dropdown();
+    </script>
     <script>
       var locatorButton = $("#locator-button")
       locatorButton.click("button", function (event) {
@@ -126,4 +158,4 @@
     </script>
 </body>
 
-</html>
+</html>a]
