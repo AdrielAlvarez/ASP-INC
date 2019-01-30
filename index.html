@@ -20,50 +20,30 @@
 
 <body class="indigo darken-2">
 
-
-  <!-- <div class="navbar navbar-inverse navbar-fixed-top">
-    <div class="navbar-header">
-
-      <div id="header">
-        <h1><a href="#">StarGazer</a></h1>
-        <h2>ASP-Inc.</h2>
-      </div>
-      <div id="menu">
-        <ul>
-          <li><a href="#">Homepage</a></li>
-          <li><a href="#">Country</a></li>
-          <li><a href="#">Location</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Contact Us</a></li>
-        </ul>
-      </div>
-    </div>
-
- 
-  </div> -->
   <nav>
-      <div class="nav-wrapper">
-          <ul id="dropdown1" class="dropdown-content">
-              <li><a href="#!">Homepage</a></li>
-              <li><a href="#!">Country</a></li>
-              <li ><a href="#!">Location</a></li>
-              <li><a href="#!">About Us</a></li>
-              <li><a href="#!">Contact Us</a></li>
-            </ul>
-            <nav>
-              <div class="nav-wrapper purple">
-                <a href="#!" class="brand-logo">Logo</a>
-                <ul class="right hide-on-med-and-down">
-                    <li><a href="#!">Homepage</a></li>
+    <div class="nav-wrapper">
+      <ul id="dropdown1" class="dropdown-content">
+        <li><a href="#!">Homepage</a></li>
+        <li><a href="#!">Country</a></li>
+        <li><a href="#!">Location</a></li>
+        <li><a href="#!">About Us</a></li>
+        <li><a href="#!">Contact Us</a></li>
+      </ul>
+      <nav>
+        <div class="nav-wrapper purple">
+          <a href="#!" class="brand-logo">Logo</a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="#!">Homepage</a></li>
 
-                  <li><a href="#!">australia</a></li>
-                  <li><a href=#!">India</a></li>
-                  <!-- Dropdown Trigger -->
-                  <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">More<i class="material-icons right">arrow_drop_down</i></a></li>
-                </ul>
-              </div>
-            </nav>      </div>
-    </nav>
+            <li><a href="#!">australia</a></li>
+            <li><a href=#!">India</a></li>
+            <!-- Dropdown Trigger -->
+            <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">More<i class="material-icons right">arrow_drop_down</i></a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </nav>
   <!--/.navbar -->
 
   <div class="row-offcanvas row-offcanvas-left">
@@ -120,42 +100,57 @@
                 wifi_tethering</i>Use My location</button>
 
             <div class="row">
-              <div class="col-md-12">
-                <div class="well"> <a class="center-align hide" href="https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjwrLvC347gAhVFS6wKHcWmA2UQjRx6BAgBEAU&url=http%3A%2F%2Fwww.diptyqueparis-memento.com%2Fen%2Fconstellations%2F&psig=AOvVaw2EkswXSmxUIV0lQK37hTVq&ust=1548705443236801"
-                    id="space-pic"><img width="400" height="400" src="http://www.diptyqueparis-memento.com/wp-content/uploads/2017/11/ESAHubble-the-constellation-Taurus-as-photographed-by-the-avid-astrophotographer-Akira-Fujii.jpg"></a></div>
+              <div class="col s12   hide" id="space-pic">
+                <div class="well"> <a class="center-align" href="http://server7.wikisky.org/full_map.html"><img src="http://server7.wikisky.org/map?custom=1&language=EN&type=PART&w=720&h=480&angle=50&ra=12&de=90&rotation=360&mag=10&max_stars=100000&zoom=3&borders=0&border_color=400000&show_grid=0&grid_color=404040&grid_color_zero=808080&grid_lines_width=1.0&grid_ra_step=1.0&grid_de_step=15.0&show_const_lines=1&constellation_lines_color=005000&constellation_lines_width=1.0&show_const_names=1&constellation_names_color=ff0000&const_name_font_type=PLAIN&const_name_font_name=SanSerif&const_name_font_size=36&show_const_boundaries=1&constellation_boundaries_color=000060&constellation_boundaries_width=1.0&background_color=000000&output=GIF"></a></div>
+                <div class="row">
+                  <form class="col s12">
+                    <div class="row">
+                      <div class="input-field col s6">
+                        <input id="first_name" type="text" class="validate">
+                        <label for="first_name">First Name</label>
+                      </div>
+                      <div class="input-field col s6">
+                        <input id="last_name" type="text" class="validate">
+                        <label for="last_name">Last Name</label>
+                      </div>
+                    </div>
+                    <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                      <i class="material-icons right">send</i>
+                    </button>
+                  </form>
+                </div>
               </div>
-            </div>
 
+            </div>
         </div>
       </div>
-    </div>
-    <!--/row-offcanvas -->
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <!--/row-offcanvas -->
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
-      crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
-      crossorigin="anonymous"></script>
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="./script.js"></script>
-    <script>
-    $(".dropdown-trigger").dropdown();
-    </script>
-    <script>
-      var locatorButton = $("#locator-button")
-      locatorButton.click("button", function (event) {
-        var c = confirm("Can we use your location?")
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+      <!-- Compiled and minified JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <script src="./script.js"></script>
+      <script>
+        $(".dropdown-trigger").dropdown();
+      </script>
+      <script>
+        var locatorButton = $("#locator-button")
+        locatorButton.click("button", function (event) {
+          var c = confirm("Can we use your location?")
 
-        if (c) {
-          locatorButton.addClass("hide")
-          $("#space-pic").removeClass("hide")
-        }
-      })
-    </script>
+          if (c) {
+            locatorButton.addClass("hide")
+            $("#space-pic").removeClass("hide")
+          }
+        })
+      </script>
 </body>
 
 </html>
