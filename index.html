@@ -20,8 +20,6 @@
   <!-- Virtule Sky -->
 
   <!--[if lt IE 9]><script src="excanvas.min.js"></script><![endif]-->
-  <script src="./vrtualSky/stuquery.js"></script>
-  <script src="./vrtualSky/virtualsky.min.js" type="text/javascript"></script>
 
 
 
@@ -156,24 +154,13 @@
         crossorigin="anonymous"></script>
       <!-- Compiled and minified JavaScript -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <script src="./vrtualSky/stuquery.js"></script>
+      <script src="./vrtualSky/virtualsky.min.js" type="text/javascript"></script>
       <script src="./script.js"></script>
+      
       <script>
         $(".dropdown-trigger").dropdown();
       </script>
-      <!-- <script>
-        var locatorButton = $("#locator-button")
-        locatorButton.click("button", function (event) {
-          var c = confirm("Can we use your location?")
-
-          if (c) {
-            locatorButton.addClass("hide")
-            $("#space-pic").removeClass("hide")
-          }
-        })
-      </script> -->
-
-
-
 
       <script>
         var x = document.getElementById("demo");
@@ -181,7 +168,7 @@
         var z;
         function getLocation() {
           if (navigator.geolocation) {
-            navigator.geolocation.watchPosition(showPosition);
+            navigator.geolocation.getCurrentPosition(showPosition);
           } else {
             x.innerHTML = "Geolocation is not supported by this browser.";
           }
@@ -199,11 +186,14 @@
           S(document).ready(function () {
 
             var planetarium = S.virtualsky({
+              mouse: false,
+              keyboard: false,
+              constellations: true,
+              constellationlabels:true,
               id: 'starmap',
-              projection: 'stereo',
+              projection: 'mollweide',
               latitude: y,
-              longitude: z
-
+              longitude: z,
 
             });
           });
