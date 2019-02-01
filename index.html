@@ -165,7 +165,7 @@
         var z;
         function getLocation() {
           if (navigator.geolocation) {
-            navigator.geolocation.watchPosition(showPosition);
+            navigator.geolocation.getCurrentPosition(showPosition);
           } else {
             x.innerHTML = "Geolocation is not supported by this browser.";
           }
@@ -183,9 +183,10 @@
           S(document).ready(function () {
 
             var planetarium = S.virtualsky({
-              mouse: false    ,
+              mouse: false,
               keyboard: false,
               constellations: true,
+              constellationlabels:true,
               id: 'starmap',
               projection: 'mollweide',
               latitude: y,
