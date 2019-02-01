@@ -1,131 +1,19 @@
-body,html,.row-offcanvas {
-    height:100%;
-    background: #000000 url(Space1.jpg);
-	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-	color: #999999;
-}
-  
-  
-
-  #sidebar {
-    width: inherit;
-    min-width: 220px;
-    max-width: 220px;
-    background-color:#f5f5f5;
-    float: left;
-    height:100%;
-    position:relative;
-    overflow-y:auto;
-    overflow-x:hidden;
-  }
   #sidebar-right {
-    width: inherit;
     min-width: 220px;
     max-width: 220px;
     float: right;
     height:100%;
     position:relative;
-    overflow-y:auto;
-    overflow-x:hidden;
   }
-  #main {
-    height:100%;
-    overflow:auto;
-  }
-  
-  /*
-   * off Canvas sidebar
-   * --------------------------------------------------
-   */
-  @media screen and (max-width: 768px) {
-    .row-offcanvas {
-      position: relative;
-      -webkit-transition: all 0.25s ease-out;
-      -moz-transition: all 0.25s ease-out;
-      transition: all 0.25s ease-out;
-      width:calc(100% + 220px);
-    }
-      
-    .row-offcanvas-left
-    {
-      left: -220px;
-    }
-  
-    .row-offcanvas-left.active {
-      left: 0;
-    }
-  
-    .sidebar-offcanvas {
-      position: absolute;
-      top: 0;
-    }
-  }
+.moonphases{
+  width: 100px;
+  height: 100%;
+  float: left;
 
-
-
-  /* nav bar *
-
-/* Header */
-
-#header {
-	width: 960px;
-	height: 80px;
-	margin: 0 0 0 0;
-	background: url(Space1.jpg);
 }
-
-#header h1, #header h2 {
-	float: left;
-	margin: 0;
-	text-transform: uppercase;
-	color: #FFFFFF;
+#left-nav {
+  width: 100px;
 }
-
-#header h1 {
-	padding: 30px 0 0 20px;
-	font-size: 50px;
+body{
+  color: white;
 }
-
-#header h2 {
-	padding: 47px 0 0 8px;
-	font-size: 25px;
-	font-style: italic;
-}
-
-#header a {
-	text-decoration: none;
-	color: #FFFFFF;
-}
-
-/* Menu */
-
-#menu {
-	width: 960px;
-	height: 51px;
-    margin: 0 0 0 0;
-    background: black;
-}
-
-#menu ul {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	line-height: normal;
-}
-
-#menu li {
-	float: left;
-	padding: 12px 10px 0 20px;
-}
-
-#menu a {
-	text-decoration: none;
-	letter-spacing: -1px;
-	font-size: 18px;
-	font-weight: bold;
-}
-
-#menu a:hover {
-	text-decoration: underline;
-}
-
