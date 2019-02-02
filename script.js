@@ -9,7 +9,16 @@ var config = {
     storageBucket: "asp-stargazer.appspot.com",
     messagingSenderId: "382843231834"
 };
+
 firebase.initializeApp(config);
+
+$("#submit-button").on("Click", function () {
+    var canvas = $("#starmap_inner");
+    var dataURL = canvas.toDataURL('image/jpeg', 1.0);
+    console.log(dataURL)
+});
+
+$(".dropdown-trigger").dropdown();
 
 $("#locator-button").on("click", function (event) {
     $("#locator-button-div").addClass("hide");
