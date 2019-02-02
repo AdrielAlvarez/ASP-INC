@@ -11,199 +11,158 @@
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  
+
   <script src="./vrtualSky/stuquery.js"></script>
   <script src="./vrtualSky/virtualsky.min.js" type="text/javascript"></script>
-  
+
   <link rel="stylesheet" href="./style.css">
 
   <title>StarGazer</title>
 </head>
 
-<!-- <body class="blue darken-2" style="background: url(Space1.jpg)"> -->
-    <body class="blue darken-2" style="background: url(Space1.jpg)">
-  <div class="container-fluid">
-    <div id="top-nav" class="row">
-      <nav>
-        <div class="nav-wrapper">
-          <ul id="dropdown1" class="dropdown-content">
-            <li><a href="#!">Homepage</a></li>
-            <li><a href="#!">Country</a></li>
-            <li><a href="#!">Location</a></li>
-            <li><a href="#!">About Us</a></li>
-            <li><a href="#!">Contact Us</a></li>
-          </ul>
+<body class="blue darken-2" style="background: url(Space1.jpg)">
+  <main>
+    <div class="container-fluid">
+      <div id="top-nav" class="row">
+        <div class="col 12">
           <nav>
-            <div class="nav-wrapper blue darken-4">
-              <div> <a href="#!" class="brand-logo">
-                  <P><strong>StarGazer</strong></P>
-                  
-                </a>
-              </div>
-              <ul class="right hide-on-med-and-down">
+            <div class="nav-wrapper">
+              <ul id="dropdown1" class="dropdown-content">
                 <li><a href="#!">Homepage</a></li>
-
-                <li><a href="#!">australia</a></li>
-                <li><a href="#!">India</a></li>
-                <!-- Dropdown Trigger -->
-                <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">More<i class="material-icons right">arrow_drop_down</i></a></li>
+                <li><a href="#!">Country</a></li>
+                <li><a href="#!">Location</a></li>
+                <li><a href="#!">About Us</a></li>
+                <li><a href="#!">Contact Us</a></li>
               </ul>
+              <nav>
+                <div class="nav-wrapper blue darken-4">
+                  <div> <a href="#!" class="brand-logo">
+                      <P><strong>StarGazer</strong></P>
+
+                    </a>
+                  </div>
+                  <ul class="right hide-on-med-and-down">
+                    <li><a href="#!">Homepage</a></li>
+
+                    <li><a href="#!">australia</a></li>
+                    <li><a href="#!">India</a></li>
+                    <!-- Dropdown Trigger -->
+                    <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">More<i class="material-icons right">arrow_drop_down</i></a></li>
+                  </ul>
+                </div>
+              </nav>
             </div>
           </nav>
         </div>
-      </nav>
-    </div>
-    <div class="row">
-      <div id="left-nav" class="col s1">
-        <table cellpadding="0" cellspacing="0" border="0" width="128"><tr><td align="center"><a href="http://www.moonconnection.com/current_moon_phase.phtml" target="mc_moon_ph"><img src="http://www.moonmodule.com/cs/dm/vn.gif" width="128" height="196" border="0" alt="" /></a><div style="position:relative;width:128px;"><div style="position:absolute;top:-20px;left:6px;background:#000000;width:116px;text-align:center;"><a href="http://www.moonconnection.com/moon_phases.phtml" target="mc_moon_ph"><font color="#7F7F7F" size="1" face="arial,helvetica,sans-serif"><span style="color:#7F7F7F;font-family:arial,helvetica,sans-serif;font-size:10px;">moon phases</span></font></a></div></div></td></tr></table>
+        </nav>
       </div>
+      <div class="row">
+        <div id="left-nav" class="col s1">
+          <table cellpadding="0" cellspacing="0" border="0" width="128">
+            <tr>
+              <td align="center"><a href="http://www.moonconnection.com/current_moon_phase.phtml" target="mc_moon_ph"><img
+                    src="http://www.moonmodule.com/cs/dm/vn.gif" width="128" height="196" border="0" alt="" /></a>
+                <div style="position:relative;width:128px;">
+                  <div style="position:absolute;top:-20px;left:6px;background:#000000;width:116px;text-align:center;"><a
+                      href="http://www.moonconnection.com/moon_phases.phtml" target="mc_moon_ph">
+                      <font color="#7F7F7F" size="1" face="arial,helvetica,sans-serif"><span style="color:#7F7F7F;font-family:arial,helvetica,sans-serif;font-size:10px;">moon
+                          phases</span></font>
+                    </a></div>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <!-- contains starmap display and submit card -->
+        <div id="center" class="col s10">
+          <div id="main ">
 
-      <div id="center" class="col s10">
-        <div id="main ">
+            <div class=" center-align">
+              <p id="body-header"></p>
+              <p class="white-text">Click the button to get your coordinates.</p>
 
-          <div class=" center-align">
-            <p id="body-header"></p>
-            <p class="white-text">Click the button to get your coordinates.</p>
+              <div id="locator-button-div">
+                <button class="waves-effect waves-light purple darken-3 white-text " id="locator-button" onclick="getLocation()"><i
+                    class="material-icons">
+                    wifi_tethering</i>Use My location</button>
 
-            <div id="locator-button-div">
-              <button class="waves-effect waves-light purple darken-3 white-text " id="locator-button" onclick="getLocation()"><i
-                  class="material-icons">
-                  wifi_tethering</i>Use My location</button>
-
-            </div>
-            <div id="picture-div" class="col s12  hide">
-              <div id="starmap" style="width:750px;height:500px;" class="col  center-align"></div>
-              <div class="col s12">
-                <form class="col s12">
-                  <div class="row">
-                    <div class="input-field col s6">
-                      <input id="first_name" type="text" class="validate">
-                      <label for="first_name">First Name</label>
+              </div>
+              <div id="picture-div" class="col s12  hide">
+                <div id="starmap" style="width:750px;height:500px;" class="col  center-align"></div>
+                <div class="col s12">
+                  <form class="col s12">
+                    <div class="row blue darken-4">
+                      <h5>If you'd like to share your sky please submit bellow:</h5>
+                      <div class="input ">
+                        <div class="input-field col s6 push-s4">
+                          <input id="first_name" type="text" class="validate">
+                          <label for="first_name">First Name</label>
+                        </div>
+                        <div class="input-field col s6 push-s6">
+                          <input id="last_name" type="text" class="validate">
+                          <label for="last_name">Last Name</label>
+                        </div>
+                        <button id="submit-button" class="btn-floating halfway-fab waves-effect waves-light red" type="submit"
+                          name="action">
+                          <i class="material-icons right">send</i>
+                        </button>
+                      </div>
                     </div>
-                    <div class="input-field col s6">
-                      <input id="last_name" type="text" class="validate">
-                      <label for="last_name">Last Name</label>
-                    </div>
-                  </div>
-                  <button class="btn waves-effect waves-light" type="submit" name="action">Submit
-                    <i class="material-icons right">send</i>
-                  </button>
-                </form>
+                    </button>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div id="right-nav" class="col s1">
-        <div id="sidebar-right" class="sidebar-offcanvas">
-          <div class=" center-align">
-            <h5>Last users:</h5>
-            <br>
-            <br>
-            <ul class="nav nav-pills nav-stacked">
-              <img src="./images/2019-01-28 (5).png" width="90%" height="90%" class="img-thumbnail">
-              <li>Elon Musk</li>
+        <!-- contains previous users that submitted their skymap -->
+        <div id="right-nav" class="col s1">
+          <div id="sidebar-right" class="hide-on-small-and-down">
+            <div class=" center-align">
+              <h5>Last users:</h5>
               <br>
               <br>
-              <img src="./images/2019-01-28 (6).png" width="90%" height="90%" class="img-thumbnail">
-              <li>Jef Bezos</li>
-              <br>
-              <br>
-              <img src="./images/2019-01-28 (7).png" width="90%" height="90%" class="img-thumbnail">
-              <li>Elon Musk</li>
-              <br>
-              <br>
-              <img src="./images/2019-01-28 (8).png" width="90%" height="90%" class="img-thumbnail">
-              <li>Jef Bezos</li>
+              <ul class="nav nav-pills nav-stacked">
+                <img src="./images/2019-01-28 (5).png" width="90%" height="90%" class="img-thumbnail">
+                <li>Elon Musk</li>
+                <br>
+                <br>
+                <img src="./images/2019-01-28 (6).png" width="90%" height="90%" class="img-thumbnail">
+                <li>Jef Bezos</li>
+                <br>
+                <br>
+                <img src="./images/2019-01-28 (7).png" width="90%" height="90%" class="img-thumbnail">
+                <li>Elon Musk</li>
+                <br>
+                <br>
+                <img src="./images/2019-01-28 (8).png" width="90%" height="90%" class="img-thumbnail">
+                <li>Jef Bezos</li>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    
-  </div>
-  <!--/.navbar -->
+    <!-- linkign fire base  -->
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+    <!-- linking jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- linking popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+      crossorigin="anonymous"></script>
+    <!-- linking bootstrap -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+      crossorigin="anonymous"></script>
+    <!-- linking materialize -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- linking native script -->
+    <script src="./script.js"></script>
 
-  <!--/row-offcanvas -->
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="./script.js" type="text/javascript"></script>
-
-  <script>
-    // activates materialized drop down menu fuctionality//
-    $(".dropdown-trigger").dropdown();
-  </script>
-
-  <script>
-    $("#locator-button").on("click", function (event) {
-      $("#locator-button-div").addClass("hide");
-      $("#picture-div").removeClass("hide");
-    })
-    var x = document.getElementById("#body-header");
-    var y;
-    var z;
-    function getLocation() {
-      if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
-      } else {
-        x.innerHTML = "Geolocation is not supported by this browser.";
-      }
-    }
-
-    function showPosition(position) {
-      y = position.coords.latitude;
-      z = position.coords.longitude;
-      console.log(y);
-      console.log(z);
-
-
-      S(document).ready(function () {
-
-        var planetarium = S.virtualsky({
-          mouse: false,
-          keyboard: false,
-          constellations: true,
-          constellationlabels: true,
-          id: 'starmap',
-          projection: 'mollweide',
-          latitude: y,
-          longitude: z,
-          cardinalpoints: true,
-
-        });
-      });
-    }
-
-  </script>
-
-
-<!-- <H1>Enjoy NASA's picture of the day...</H1> -->
-<!-- <b>API URL:</b>
-<pre id="reqObject"></pre> -->
-
-
-<!-- <img id="apod_img_id" width="250px"/> -->
-
-<!-- <iframe id="apod_vid_id" type="text/html" width="640" height="385" frameborder="0"></iframe> -->
-<p id="copyright"></p>
-
-<h3 id="apod_title"></h3>
-<p id="apod_explanation"></p>
-<br/>
-<!-- <b>Return Object:</b>
-<pre id="returnObject"></pre> -->
-
-
-</body>
-<footer class="page-footer blue darken-4">
-      <div class="container center-align">
+  </main>
+  <footer class="page-footer blue darken-4">
+    <div class="container center-align">
       © 2019 ASP Inc.
-      </div>
+    </div>
   </footer>
+</body>
+
 </html>
