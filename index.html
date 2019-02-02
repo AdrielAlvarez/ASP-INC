@@ -6,8 +6,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
-    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -34,7 +34,7 @@
             <div class="nav-wrapper blue darken-4">
               <div> <a href="#!" class="brand-logo">
                   <P><strong>StarGazer</strong></P>
-                  
+
                 </a>
               </div>
               <ul class="right hide-on-med-and-down">
@@ -43,7 +43,8 @@
                 <li><a href="#!">australia</a></li>
                 <li><a href="#!">India</a></li>
                 <!-- Dropdown Trigger -->
-                <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">More<i class="material-icons right">arrow_drop_down</i></a></li>
+                <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">More<i
+                      class="material-icons right">arrow_drop_down</i></a></li>
               </ul>
             </div>
           </nav>
@@ -64,8 +65,8 @@
             <p class="white-text">Click the button to get your coordinates.</p>
 
             <div id="locator-button-div">
-              <button class="waves-effect waves-light purple darken-3 white-text " id="locator-button" onclick="getLocation()"><i
-                  class="material-icons">
+              <button class="waves-effect waves-light purple darken-3 white-text " id="locator-button"
+                onclick="getLocation()"><i class="material-icons">
                   wifi_tethering</i>Use My location</button>
 
             </div>
@@ -73,18 +74,21 @@
               <div id="starmap" style="width:750px;height:500px;" class="col  center-align"></div>
               <div class="col s12">
                 <form class="col s12">
-                  <div class="row">
-                    <div class="input-field col s6">
-                      <input id="first_name" type="text" class="validate">
-                      <label for="first_name">First Name</label>
-                    </div>
-                    <div class="input-field col s6">
-                      <input id="last_name" type="text" class="validate">
-                      <label for="last_name">Last Name</label>
+                  <div class="row blue darken-4">
+                      <h5>If you'd like to share your sky please submit bellow:</h5>
+                    <div class="input ">
+                      <div class="input-field col s6 push-s4">
+                        <input id="first_name" type="text" class="validate">
+                        <label for="first_name" >First Name</label>
+                      </div>
+                      <div class="input-field col s6 push-s6">
+                        <input id="last_name" type="text" class="validate">
+                        <label for="last_name">Last Name</label>
+                      </div>
+                      <a class="btn-floating halfway-fab waves-effect waves-light red"><i
+                          class="material-icons">send</i></a>
                     </div>
                   </div>
-                  <button class="btn waves-effect waves-light" type="submit" name="action">Submit
-                    <i class="material-icons right">send</i>
                   </button>
                 </form>
               </div>
@@ -117,19 +121,22 @@
         </div>
       </div>
     </div>
-    
+
   </div>
   <!--/.navbar -->
 
   <!--/row-offcanvas -->
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+  <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+    integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
     crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+    integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="./script.js"></script>
@@ -140,44 +147,6 @@
   </script>
 
   <script>
-    $("#locator-button").on("click", function (event) {
-      $("#locator-button-div").addClass("hide");
-      $("#picture-div").removeClass("hide");
-    })
-    var x = document.getElementById("#body-header");
-    var y;
-    var z;
-    function getLocation() {
-      if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
-      } else {
-        x.innerHTML = "Geolocation is not supported by this browser.";
-      }
-    }
-
-    function showPosition(position) {
-      y = position.coords.latitude;
-      z = position.coords.longitude;
-      console.log(y);
-      console.log(z);
-
-
-      S(document).ready(function () {
-
-        var planetarium = S.virtualsky({
-          mouse: false,
-          keyboard: false,
-          constellations: true,
-          constellationlabels: true,
-          id: 'starmap',
-          projection: 'mollweide',
-          latitude: y,
-          longitude: z,
-          cardinalpoints: true,
-
-        });
-      });
-    }
 
   </script>
 
@@ -187,8 +156,9 @@
 
 </body>
 <footer class="page-footer blue darken-4">
-      <div class="container center-align">
-      © 2019 ASP Inc.
-      </div>
-  </footer>
+  <div class="container center-align">
+    © 2019 ASP Inc.
+  </div>
+</footer>
+
 </html>
