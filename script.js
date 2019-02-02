@@ -12,7 +12,7 @@ var config = {
 
 firebase.initializeApp(config);
 
-$("#submit-button").on("Click", function () {
+$("document").on("click","#submit-button", function () {
     var canvas = $("#starmap_inner");
     var dataURL = canvas.toDataURL('image/jpeg', 1.0);
     console.log(dataURL)
