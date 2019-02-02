@@ -19,8 +19,10 @@
 </head>
 
 <body class="blue darken-2" style="background: url(Space1.jpg)">
+  <main>
   <div class="container-fluid">
     <div id="top-nav" class="row">
+      <div class="col 12">
       <nav>
         <div class="nav-wrapper">
           <ul id="dropdown1" class="dropdown-content">
@@ -50,9 +52,10 @@
           </nav>
         </div>
       </nav>
+      </div>
     </div>
-    <div class="row">
-      <div id="left-nav" class="col s1">
+    <div class="row " >
+      <div id="left-nav" class="col s1 hide-on-small-and-down">
         <script type="text/javascript" src="https://moonphases.co.uk/js/widget.js" id="moonphase_widget" widget="tall"
           lat="" lng="" date="" tz=""></script>
       </div>
@@ -97,7 +100,7 @@
         </div>
       </div>
       <div id="right-nav" class="col s1">
-        <div id="sidebar-right" class="sidebar-offcanvas">
+        <div id="sidebar-right" class="hide-on-small-and-down">
           <div class=" center-align">
             <h5>Last users:</h5>
             <br>
@@ -146,19 +149,16 @@
     $(".dropdown-trigger").dropdown();
   </script>
 
-  <script>
-
-  </script>
 
 
 
 
-
-</body>
+</main>
 <footer class="page-footer blue darken-4">
-  <div class="container center-align">
+    <div class="container center-align">
     © 2019 ASP Inc.
-  </div>
+    </div>
 </footer>
+</body>
 
 </html>

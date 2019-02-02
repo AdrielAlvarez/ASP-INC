@@ -14,19 +14,19 @@ firebase.initializeApp(config);
 $("#locator-button").on("click", function (event) {
     $("#locator-button-div").addClass("hide");
     $("#picture-div").removeClass("hide");
-  })
-  var x = document.getElementById("#body-header");
-  var y;
-  var z;
-  function getLocation() {
+})
+var x = document.getElementById("#body-header");
+var y;
+var z;
+function getLocation() {
     if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(showPosition);
+        navigator.geolocation.getCurrentPosition(showPosition);
     } else {
-      x.innerHTML = "Geolocation is not supported by this browser.";
+        x.innerHTML = "Geolocation is not supported by this browser.";
     }
-  }
+}
 
-  function showPosition(position) {
+function showPosition(position) {
     y = position.coords.latitude;
     z = position.coords.longitude;
     console.log(y);
@@ -35,22 +35,21 @@ $("#locator-button").on("click", function (event) {
 
     S(document).ready(function () {
 
-      var planetarium = S.virtualsky({
-        mouse: false,
-        keyboard: false,
-        constellations: true,
-        constellationlabels: true,
-        id: 'starmap',
-        projection: 'mollweide',
-        latitude: y,
-        longitude: z,
-        cardinalpoints: true,
+        var planetarium = S.virtualsky({
+            mouse: false,
+            keyboard: false,
+            constellations: true,
+            constellationlabels: true,
+            id: 'starmap',
+            projection: 'mollweide',
+            latitude: y,
+            longitude: z,
+            cardinalpoints: true,
 
-        console.log(this)
 
-      });
+        });
     });
-  }
+}
 
 
 $.ajax({
