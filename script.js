@@ -12,10 +12,13 @@ var config = {
 
 firebase.initializeApp(config);
 
-$("#submit-button").on("Click", function () {
+$("#my-submit-button").click(function (event) {
+    event.preventDefault();
     var canvas = $("#starmap_inner");
-    var dataURL = canvas.toDataURL('image/jpeg', 1.0);
-    console.log(dataURL)
+    console.log('this is my canvas ', canvas)
+    var dataURL = canvas[0].toDataURL('image/jpeg', 1.0);
+    console.log("this is my image ",dataURL)
+    $("#user-im-0").attr("src", dataURL)
 });
 
 $(".dropdown-trigger").dropdown();
@@ -60,30 +63,31 @@ function showPosition(position) {
     });
 }
 
+var url= "https://api.nasa.gov/planetary/apod?api_key=NNKOjkoul8n1CH18TWA9gwngW1s1SmjESPjNoUFo";
 
 $.ajax({
-    url: "https://api.nasa.gov/planetary/apod?api_key=NNKOjkoul8n1CH18TWA9gwngW1s1SmjESPjNoUFo",
+    url: url,
     success: function(result){
-      if("copyright" in result) {
-        $("#copyright").text("Image Credits: " + result.copyright);
+        if("copyright" in result) {
+          $("#copyright").text("Image Credits: " + result.copyright);
+        }
+        else {
+          $("#copyright").text("Image Credits: " + "Public Domain");
+        }
+        
+        if(result.media_type == "video") {
+          $("#apod_img_id").css("display", "none"); 
+          $("#apod_vid_id").attr("src", result.url);
+          $("body").css("background-image", "url("+result.url+")");
+        }
+        else {
+          $("#apod_vid_id").css("display", "none"); 
+          $("#apod_img_id").attr("src", result.url);
+          $("body").css("background-image", "url("+result.url+")");
+        }
+        $("#reqObject").text(url);
+        $("#returnObject").text(JSON.stringify(result, null, 4));  
+        $("#apod_explanation").text(result.explanation);
+        $("#apod_title").text(result.title);
       }
-      else {
-        $("#copyright").text("Image Credits: " + "Public Domain");
-      }
-      
-      if(result.media_type == "video") {
-        $("#apod_img_id").css("display", "none"); 
-        $("#apod_vid_id").attr("src", result.url);
-        $("body").css("background-image", "url("+result.url+")");
-      }
-      else {
-        $("#apod_vid_id").css("display", "none"); 
-        $("#apod_img_id").attr("src", result.url);
-        $("body").css("background-image", "url("+result.url+")");
-      }
-      $("#reqObject").text(url);
-      $("#returnObject").text(JSON.stringify(result, null, 4));  
-      $("#apod_explanation").text(result.explanation);
-      $("#apod_title").text(result.title);
-    }
 });
