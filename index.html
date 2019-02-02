@@ -11,14 +11,17 @@
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
   <script src="./vrtualSky/stuquery.js"></script>
   <script src="./vrtualSky/virtualsky.min.js" type="text/javascript"></script>
+  
   <link rel="stylesheet" href="./style.css">
 
   <title>StarGazer</title>
 </head>
 
-<body class="blue darken-2" style="background: url(Space1.jpg)">
+<!-- <body class="blue darken-2" style="background: url(Space1.jpg)"> -->
+    <body class="blue darken-2" style="background: url(Space1.jpg)">
   <div class="container-fluid">
     <div id="top-nav" class="row">
       <nav>
@@ -52,8 +55,7 @@
     </div>
     <div class="row">
       <div id="left-nav" class="col s1">
-        <script type="text/javascript" src="https://moonphases.co.uk/js/widget.js" id="moonphase_widget" widget="tall"
-          lat="" lng="" date="" tz=""></script>
+        <table cellpadding="0" cellspacing="0" border="0" width="128"><tr><td align="center"><a href="http://www.moonconnection.com/current_moon_phase.phtml" target="mc_moon_ph"><img src="http://www.moonmodule.com/cs/dm/vn.gif" width="128" height="196" border="0" alt="" /></a><div style="position:relative;width:128px;"><div style="position:absolute;top:-20px;left:6px;background:#000000;width:116px;text-align:center;"><a href="http://www.moonconnection.com/moon_phases.phtml" target="mc_moon_ph"><font color="#7F7F7F" size="1" face="arial,helvetica,sans-serif"><span style="color:#7F7F7F;font-family:arial,helvetica,sans-serif;font-size:10px;">moon phases</span></font></a></div></div></td></tr></table>
       </div>
 
       <div id="center" class="col s10">
@@ -125,14 +127,13 @@
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="./script.js"></script>
+  <script src="./script.js" type="text/javascript"></script>
 
   <script>
     // activates materialized drop down menu fuctionality//
@@ -182,7 +183,21 @@
   </script>
 
 
+<!-- <H1>Enjoy NASA's picture of the day...</H1> -->
+<!-- <b>API URL:</b>
+<pre id="reqObject"></pre> -->
 
+
+<!-- <img id="apod_img_id" width="250px"/> -->
+
+<!-- <iframe id="apod_vid_id" type="text/html" width="640" height="385" frameborder="0"></iframe> -->
+<p id="copyright"></p>
+
+<h3 id="apod_title"></h3>
+<p id="apod_explanation"></p>
+<br/>
+<!-- <b>Return Object:</b>
+<pre id="returnObject"></pre> -->
 
 
 </body>
