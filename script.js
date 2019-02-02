@@ -12,10 +12,13 @@ var config = {
 
 firebase.initializeApp(config);
 
-$("document").on("click","#submit-button", function () {
+$("#my-submit-button").click(function (event) {
+    event.preventDefault();
     var canvas = $("#starmap_inner");
-    var dataURL = canvas.toDataURL('image/jpeg', 1.0);
-    console.log(dataURL)
+    console.log('this is my canvas ', canvas)
+    var dataURL = canvas[0].toDataURL('image/jpeg', 1.0);
+    console.log("this is my image ",dataURL)
+    $("#user-im-0").attr("src", dataURL)
 });
 
 $(".dropdown-trigger").dropdown();
@@ -60,9 +63,10 @@ function showPosition(position) {
     });
 }
 
+var url= "https://api.nasa.gov/planetary/apod?api_key=NNKOjkoul8n1CH18TWA9gwngW1s1SmjESPjNoUFo";
 
 $.ajax({
-    url: "https://api.nasa.gov/planetary/apod?api_key=NNKOjkoul8n1CH18TWA9gwngW1s1SmjESPjNoUFo",
+    url: url,
     success: function(result){
         if("copyright" in result) {
           $("#copyright").text("Image Credits: " + result.copyright);
