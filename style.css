@@ -17,6 +17,7 @@
 body{
   color: white;
 }
+
 .page-footer{
   position: fixed;
  left: 0;
@@ -26,3 +27,4 @@ body{
  color: white;
  text-align: center;
 }
+
