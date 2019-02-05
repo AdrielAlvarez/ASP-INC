@@ -34,6 +34,7 @@ console.log("im text",textTag,"Im an image  ",imgTag)
 })
 
 $("#my-submit-button").click(function (event) {
+  event.preventDefault();
   var canvas = $("#starmap_inner");
   var dataURL = canvas[0].toDataURL('image/jpeg', 1.0);
   usersRef.push({
