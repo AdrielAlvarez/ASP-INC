@@ -14,19 +14,22 @@ var config = {
 
 firebase.initializeApp(config);
 var database = firebase.database();
-  var usersRef = database.ref().child("users")
-usersRef.on("value",function(snapshot){
+database.ref("users").on("child_added",function(childSnapshot){
+  console.log(childSnapshot.val());
 var imgTag = $("<img>")
 var textTag = $("<li></li>")
-var name= snapshot.name
+var name= childSnapshot.val().name +" :"
 console.log(name)
-var map= snapshot.starmap
+var map= childSnapshot.val().starmap
 console.log(map)
 textTag.text(name)
 imgTag.attr("src",map)
+imgTag.css({"width":"250px","height":"125px","padding-right":"25px"})
+$("#shared-map").prepend(imgTag) 
+$("#shared-map").prepend($("<br>"))  
+
 $("#shared-map").prepend(textTag)
-$("#shared-map").prepend(imgTag)  
-console.log("im text",textTag.innerHTML,"Im an image  ",imgTag)
+console.log("im text",textTag,"Im an image  ",imgTag)
 
 })
 
