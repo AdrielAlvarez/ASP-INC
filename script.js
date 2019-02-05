@@ -18,16 +18,14 @@ database.ref("users").on("child_added",function(childSnapshot){
   console.log(childSnapshot.val());
 var imgTag = $("<img>")
 var textTag = $("<li></li>")
-var name= childSnapshot.val().name +" :"
+var name= childSnapshot.val().name + " :"
 console.log(name)
 var map= childSnapshot.val().starmap
 console.log(map)
 textTag.text(name)
 imgTag.attr("src",map)
 imgTag.css({"width":"250px","height":"125px","padding-right":"25px"})
-$("#shared-map").prepend(imgTag) 
-$("#shared-map").prepend($("<br>"))  
-
+$("#shared-map").prepend(imgTag)  
 $("#shared-map").prepend(textTag)
 console.log("im text",textTag,"Im an image  ",imgTag)
 
@@ -37,15 +35,18 @@ $("#my-submit-button").click(function (event) {
   event.preventDefault();
   var canvas = $("#starmap_inner");
   var dataURL = canvas[0].toDataURL('image/jpeg', 1.0);
-  usersRef.push({
+  database.ref("users").push({
     name: $("#first_name").val() + " " + $("#last_name").val(),
     starmap: dataURL
+    
   })
+  console.log("i am working")
 });
 
 $(".dropdown-trigger").dropdown();
 
 $("#locator-button").on("click", function (event) {
+  $("#center-head").text("Here Is your Sky:")
   $("#locator-button-div").addClass("hide");
   $("#picture-div").removeClass("hide");
 })
