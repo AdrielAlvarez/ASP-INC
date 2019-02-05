@@ -14,7 +14,21 @@ var config = {
 
 firebase.initializeApp(config);
 var database = firebase.database();
-var usersRef = database.ref("users")
+  var usersRef = database.ref().child("users")
+usersRef.on("value",function(snapshot){
+var imgTag = $("<img>")
+var textTag = $("<li></li>")
+var name= snapshot.name
+console.log(name)
+var map= snapshot.starmap
+console.log(map)
+textTag.text(name)
+imgTag.attr("src",map)
+$("#shared-map").prepend(textTag)
+$("#shared-map").prepend(imgTag)  
+console.log("im text",textTag.innerHTML,"Im an image  ",imgTag)
+
+})
 
 $("#my-submit-button").click(function (event) {
   event.preventDefault();
@@ -84,7 +98,7 @@ $.ajax({
     if (result.media_type == "video") {
       $("#apod_img_id").css("display", "none");
       $("#apod_vid_id").attr("src", result.url);
-      $("body").css("background-image", "url(" + result.url + ")");
+      $("body").css("background-image", "url(" + "  Space1.jpg" + ")");
     }
     else {
       $("#apod_vid_id").css("display", "none");
